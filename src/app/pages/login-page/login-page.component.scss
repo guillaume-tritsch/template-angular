@@ -1,43 +1,79 @@
+@use "colors";
 
-main{
+main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/assets/img/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
+  #blurryFilter {
     height: 100vh;
     width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: aqua;
+    backdrop-filter: blur(50px);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      0deg,
+      rgba(2, 0, 36, 0.651) 0%,
+      rgba(225, 0, 255, 0.137) 100%
+    );
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    z-index: 0;
+  }
+  article {
+    z-index: 1;
+    height: 70%;
+    width: 80%;
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
-    article{
+    background-color: colors.$secondary-background-color;
+    border-radius: 8px;
+    box-shadow: 0px 2.3px 2.7px rgba(0, 0, 0, 0.037),
+      0px 5.9px 6.9px rgba(0, 0, 0, 0.055),
+      0px 12.1px 14.2px rgba(0, 0, 0, 0.069),
+      0px 24.8px 29.2px rgba(0, 0, 0, 0.083), 0px 68px 80px rgba(0, 0, 0, 0.1);
 
-        display: flex;
-        flex-direction: row;
-        height: 50vh;
+    overflow: hidden;
 
-        section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 35px;
-            height: fit-content;
-            width: fit-content;
-    
-    
-    
-            background-color: aquamarine;
-            border-radius: 8px;
-            box-shadow:
-            2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
-            6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
-            12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
-            22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
-            41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
-            100px 100px 80px rgba(0, 0, 0, 0.07);
-            padding: 50px;
-        }
+    #controlPassword {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
     }
 
-}
+    section:first-child {
+      background-image: url("/assets/img/loginBackground.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
 
+    section:nth-child(2) {
+      padding: 30px 60px;
+      #formInput{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        
+      }
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      justify-content: center;
+      gap: 35px;
+    }
+  }
+}

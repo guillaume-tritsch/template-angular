@@ -6,8 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./login-page.component.scss']
 })
 export class LoginPageComponent {
-  public  login: string = '';
-  public  password: string = '';
+  public login: string = '';
+  public password: string = '';
+  public selected: boolean = false;
 
   public signIn() {
     if (this.login === 'admin' && this.password === 'admin') {

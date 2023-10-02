@@ -8,10 +8,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
-
+import { CheckboxModule } from 'primeng/checkbox';
+import { PasswordModule } from 'primeng/password';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PrimeNGConfig } from 'primeng/api';
 @NgModule({
   declarations: [AppComponent, LoginPageComponent],
-  imports: [ReactiveFormsModule, FormsModule, BrowserModule, AppRoutingModule, InputTextModule, ButtonModule],
+  imports: [ReactiveFormsModule, FormsModule, BrowserModule, AppRoutingModule, InputTextModule, ButtonModule, CheckboxModule, PasswordModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

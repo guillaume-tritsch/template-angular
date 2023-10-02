@@ -1,21 +1,35 @@
 <main>
 
+    <div id="blurryFilter"></div>
     <article>
         <section id="loginPicture">
-            <img src="assets/img/login.jpg" alt="login">
         </section>
+
         <section id="loginSection">
-
+            <div>
             <h1>Connexion</h1>
-            <span class="p-float-label">
-                <input pInputText id="email" [(ngModel)]="login" />
-                <label htmlFor="email">Email</label>
-            </span>
 
-            <span class="p-float-label">
-                <input pInputText id="password" [(ngModel)]="password" />
-                <label htmlFor="password">Mot de passe</label>
-            </span>
+            <span>Vous n'avez pas de compte ? <a>En créer un !</a> </span>
+        </div>
+        <div id="formInput">
+            <div class="p-inputgroup">
+                <span class="p-inputgroup-addon">
+                    <i class="pi pi-user"></i>
+                </span>
+                <input pInputText placeholder="Nom d'utilisateur" />
+            </div>
+            <div class="p-inputgroup">
+                <span class="p-inputgroup-addon">
+                    <i class="pi pi-lock"></i>
+                </span>
+                <p-password  placeholder="Mot de passe" [toggleMask]="true" [feedback]="false"></p-password>
+            </div>
+
+            <div id="controlPassword">
+                <p-checkbox label="Se souvenir de moi" [binary]="true" [(ngModel)]="selected"></p-checkbox>
+                <a>Mot de passe oublié ?</a>
+            </div>
+        </div>
 
             <button pButton type="button" label="Sign in" (click)="signIn()"></button>
         </section>
