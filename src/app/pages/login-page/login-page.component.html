@@ -1,0 +1,32 @@
+<main>
+
+    <article>
+        <section id="loginPicture">
+            <img src="assets/img/login.jpg" alt="login">
+        </section>
+        <section id="loginSection">
+
+            <h1>Connexion</h1>
+            <span class="p-float-label">
+                <input pInputText id="email" [(ngModel)]="login" />
+                <label htmlFor="email">Email</label>
+            </span>
+
+            <span class="p-float-label">
+                <input pInputText id="password" [(ngModel)]="password" />
+                <label htmlFor="password">Mot de passe</label>
+            </span>
+
+            <button pButton type="button" label="Sign in" (click)="signIn()"></button>
+        </section>
+    </article>
+
+
+    <footer>
+        <ul>
+            <li><a href="#">Politique</a></li>
+            <li><a href="#">Sécurité</a></li>
+            <li><a id="nousContacter" href="nousContacter.html">Nous contacter</a></li>
+        </ul>
+    </footer>
+</main>
