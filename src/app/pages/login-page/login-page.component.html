@@ -7,7 +7,7 @@
       <div>
         <h1>Connexion</h1>
 
-        <span>Vous n'avez pas de compte ? <a>En créer un !</a> </span>
+        <span class="secondaryTextColor">Vous n'avez pas de compte ? <a>En créer un !</a> </span>
       </div>
       <div id="formInput">
         <div class="p-inputgroup">
@@ -29,6 +29,7 @@
 
         <div id="controlPassword">
           <p-checkbox
+            class="secondaryTextColor"
             label="Se souvenir de moi"
             [binary]="true"
             [(ngModel)]="selected"
@@ -43,10 +44,10 @@
 
   <footer>
     <ul>
-      <li><a href="#">Politique</a></li>
-      <li><a href="#">Sécurité</a></li>
+      <li><a class="footerLink" href="#">Politique</a></li>
+      <li><a class="footerLink" href="#">Sécurité</a></li>
       <li>
-        <a id="nousContacter" href="nousContacter.html">Nous contacter</a>
+        <a class="footerLink" id="contactUs" href="#">Nous contacter</a>
       </li>
     </ul>
   </footer>
