@@ -28,3 +28,8 @@ a {
     text-decoration: underline;
   }
 }
+
+// Fixé : l'état "focus" sur l'élément .p-inputgroup faisait disparaitre l'oeil
+.p-inputgroup > p-password > .p-password.p-inputwrapper > .p-icon-wrapper {
+  z-index: 999;
+}
